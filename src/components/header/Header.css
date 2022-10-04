@@ -1,0 +1,137 @@
+
+.header{
+    height: 3.4rem;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header_search{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border: 1px solid;
+  
+}
+
+.header_search > select {
+    height: 32px;
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    margin-right: -50px;
+    z-index: 1;
+}
+
+.header_searchInput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+ 
+}
+.header_searchInput:focus{
+    border: 5px solid #cd9042;
+    padding-left: 50px;
+}
+
+.header_logo{
+   width: 100px;
+   object-fit: contain;
+   margin: 0 20px;
+   margin-top: 18px;
+}
+
+.header_location{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+}
+.header_location1{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+.header_location2{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+}
+
+.location_logo{
+    height: 3px;
+}
+
+.header_select{
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
+    background-color: rgb(234, 237, 237);
+    /* margin-left: -14px; */
+    
+}
+
+.header_searchIcon{
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
+    margin-left: -34px;
+}
+
+.header_nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_optionLineOne{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header_optionLineTwo{
+    font-size: 13px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.header_optionBasket{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header_basketCount{
+    margin: 0 10px;
+}
+
+ 
+.item-container {
+    display: flex;
+    color: white;
+    background-color: #2b2727;
+    position: sticky;
+
+  }
+  
+  .item-container p {
+    margin: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }

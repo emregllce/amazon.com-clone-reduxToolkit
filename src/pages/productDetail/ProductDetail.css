@@ -1,0 +1,114 @@
+.main{
+    background-color: white;
+    height: 100vh
+}
+
+.detailContainer{
+    display: flex;
+    flex-direction: row;
+    max-width: 1400px;
+    margin: auto;   
+    margin-top: 100px;
+    background-color: white;
+}
+
+.product-image {
+    width: 40%;
+    text-align: center;
+}
+.image{
+    margin-top: 10px;
+    width: 300px;
+    height: 450px;
+
+}
+.product-description{
+    width: 40%;
+    /* background-color: bisque; */
+    padding: 0 20px;
+}
+.description-top{
+    border-bottom: 1px solid rgb(207, 204, 204);
+    padding-bottom: 20px;
+}
+h5{
+    font-size: 28px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ppp{
+    display: flex;
+}
+.rating-count {
+    margin-left: 15px;
+}
+.discription-center{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 125px;
+    border-bottom: 1px solid rgb(207, 204, 204);
+}
+
+.discription-center > p,
+.cart-details-up > p
+{
+    margin-left: 15px;
+}
+
+.discription-bottom{
+    margin-top: 10px;
+}
+.cart-details{
+    width: 20%;
+    /* background-color: aquamarine; */
+    padding: 10px 20px;
+    border: solid 1px rgb(233, 225, 225);
+    border-radius: 10px;
+    /* margin: 0 auto; */
+    /* margin-top: 15px; */
+}
+.cart-details-up{
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+}
+.inStock{
+text-decoration: none solid rgb(0, 118, 0);
+margin-top: 60px;
+}
+
+#qty-select{
+    font-size: 12px;
+    /* border-radius: 5px; */
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgb(233, 228, 228);
+}
+#qty-select:focus{
+    outline: none;
+}
+.select-part{
+    background-color: rgb(233, 228, 228);
+    width: 55px;
+    padding-left: 8px;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.button{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 0;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.addCart{
+    background-color: #F7CA00;
+}
+.buyNow{
+    background-color: orange;
+}
+

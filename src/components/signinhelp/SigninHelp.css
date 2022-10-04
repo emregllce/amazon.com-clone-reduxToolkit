@@ -1,0 +1,36 @@
+.helpMenu1{
+    margin-top: -6px;
+}
+.helpItems > p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(8, 8, 235);
+    font-size: 13px;
+    cursor: pointer;
+    
+    
+}
+
+.help1, .help2{
+    display: flex;
+    align-items: center;
+}
+.help2{
+    align-items: flex-start;
+}
+.pBox{
+    margin-top: -7px;
+}
+
+.pTag:hover{
+    color: brown;
+    text-decoration: underline;
+}
+
+.icons{
+    color: gray;
+    width: 0.5cm !important;
+    cursor: pointer;
+ }
+
+ /* min-height: calc(100vh - 200px)  bunu footer üstüne yaz kalan kısmı footer otomatik kaplasın */
+
