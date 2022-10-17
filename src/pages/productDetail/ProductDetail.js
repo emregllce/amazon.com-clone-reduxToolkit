@@ -28,7 +28,6 @@ const ProductDetail = () => {
 
   const handleQty = (e) => {
     setQty(e.target.value);
-    console.log(qty);
   }
   return (
     <div className="main">
