@@ -16,16 +16,16 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart(state, action) {
       const itemIndex = state.cartItems.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.id === action.payload.product.id
         );
         if (itemIndex >= 0) {
-          state.cartItems[itemIndex].cartQuantity += 1;
+          state.cartItems[itemIndex].cartQuantity += action.payload.qty;
           console.log(`action`, action.payload);
         } else {
-          const tempProducts = { ...action.payload, cartQuantity: 1 };
+          const tempProducts = { ...action.payload.product, cartQuantity: action.payload.qty };
           state.cartItems.push(tempProducts);
-          console.log(`action`, action.payload);
-          console.log(`actionid`, action.payload.id);
+          console.log(`action`, action);
+          console.log(`actionid`, action.payload.product.id);
       }
     //   localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },

@@ -8,15 +8,14 @@ const ProductDetail = () => {
   const location = useLocation();
   const product = location.state.item;
   const navigate = useNavigate();
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const dispatch = useDispatch()
   const cart = useSelector((state)=>state.cart)
   // console.log(cart);
 
 
-  const handleAddToCart = (qty) => {
-    dispatch(addToCart(qty))
-    // console.log(cart.cartItems);
+  const handleAddToCart = () => {
+    dispatch(addToCart({product, qty}))
   };
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const ProductDetail = () => {
   
 
   const handleQty = (e) => {
-    setQty(e.target.value);
+    setQty(parseInt(e.target.value));
   }
   return (
     <div className="main">
@@ -86,7 +85,7 @@ const ProductDetail = () => {
               </select>
             </div>
             <div>
-              <button onClick={()=>handleAddToCart(product)} className="button addCart">
+              <button onClick={()=>handleAddToCart(product,qty)} className="button addCart">
                 Add to Cart
               </button>
               <button className="button buyNow">Buy Now</button>
