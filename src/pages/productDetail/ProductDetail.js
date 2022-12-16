@@ -20,14 +20,13 @@ const ProductDetail = () => {
 
   useEffect(() => {
     dispatch(getTotals())
-  
-   
   }, [cart, dispatch])
   
 
   const handleQty = (e) => {
     setQty(parseInt(e.target.value));
   }
+
   return (
     <div className="main">
       <div className="ad">
@@ -75,7 +74,7 @@ const ProductDetail = () => {
             <p className="inStock">In Stock</p>
             <br />
             <div className="select-part">
-              <label style={{ fontSize: "12px" }}>Qty:</label>
+              <label style={{ fontSize: "14px", fontFamily:"Arial" }}>Qty:</label>
               <select name="qty-select" id="qty-select" onChange={handleQty}>
                 <option value="1">1</option>
                 <option value="2">2</option>

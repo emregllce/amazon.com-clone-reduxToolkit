@@ -79,7 +79,7 @@ margin-top: 60px;
 }
 
 #qty-select{
-    font-size: 12px;
+    font-size: 14px;
     /* border-radius: 5px; */
     border: none;
     margin-bottom: 10px;
@@ -90,8 +90,8 @@ margin-top: 60px;
 }
 .select-part{
     background-color: rgb(233, 228, 228);
-    width: 55px;
-    padding-left: 8px;
+    width: 60px;
+    padding: 5px 8px 5px ;
     border-radius: 5px;
     height: 25px;
 }

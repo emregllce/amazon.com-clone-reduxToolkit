@@ -243,4 +243,25 @@ const headerItems = [
   "Today's Deals",
 ];
 
-export { products, headerItems };
+const allSubItems = [
+  "All",
+  "Alexa Skills",
+  "Amazon Devices",
+  "Amazon Pharmacy",
+  "Amazon Warehouse",
+  "Appliances",
+  "Apps & Games",
+  "Arts, Crafts & Sewing",
+  "Audible books & Originals",
+  "Automotive Parts, Accesories",
+  "Baby",
+  "Beauty & Personal Care",
+  "Books",
+  "CDs & Vinyl",
+  "Cell Phones , Accessories",
+  "Clothing, Shoes, Jewelry",
+  "Collectibles & Fine Art",
+  "Computers"
+]
+
+export { products, headerItems, allSubItems };

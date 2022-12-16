@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link, useNavigate } from "react-router-dom";
-import { headerItems } from "../../helpers/utils/ProductsData";
+import { allSubItems, headerItems } from "../../helpers/utils/ProductsData";
 // import { logOut } from "../../helpers/firebase";
 import { useDispatch, useSelector } from "react-redux"
 import { logout } from "../../redux/userSlice";
@@ -56,7 +56,9 @@ const handleSignOut = () => {
 
         <div className="header_search">
           <select className="header_select">
-            <option>All</option>
+            {allSubItems && allSubItems.map((item, index)=>(
+              <option key={index} className="all_option">{item}</option>
+            ))}
           </select>
           <input className="header_searchInput" type="text" />
           <SearchIcon className="header_searchIcon" />

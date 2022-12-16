@@ -12,10 +12,32 @@
     background-color: white;
     margin-right: 15px;
   }
+  .titlexxx{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #DDDDDD;
+    margin: 0 20px;
+    padding-bottom: 0;
+  }
 
+  
+  .checkout__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .checkout__title2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(119, 119, 119);
+    font-weight: 500;    
+    margin-bottom: 5px;
+  }
   .item{
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     padding-left: 20px;
     margin: 20px 20px 0;
     border-bottom: 1px solid #DDDDDD;
@@ -38,8 +60,3 @@
     text-align: center;
   }
   
-  .checkout__title {
-    margin-right: 10px;
-    padding: 10px;
-    font-size: 28px;
-  }
