@@ -20,12 +20,10 @@ export const cartSlice = createSlice({
         );
         if (itemIndex >= 0) {
           state.cartItems[itemIndex].cartQuantity += action.payload.qty;
-          console.log(`action`, action.payload);
         } else {
           const tempProducts = { ...action.payload.product, cartQuantity: action.payload.qty };
           state.cartItems.push(tempProducts);
-          console.log(`action`, action);
-          console.log(`actionid`, action.payload.product.id);
+          
       }
     //   localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },

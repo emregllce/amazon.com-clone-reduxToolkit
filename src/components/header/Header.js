@@ -49,8 +49,8 @@ const handleSignOut = () => {
         </div>)
         :
         (<div className="header_location">
-          <span className="header_location1">Deliver to</span>
-          <span className="header_location2">Turkey</span>
+          <span className="header_location1">Hello</span>
+          <span className="header_location2">Select your address</span>
         </div>)
         }
 
