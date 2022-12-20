@@ -24,6 +24,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
     } else {
       let reduceCOP = cartQuantity - e.target.value
       dispatch(reduceCard({reduceCOP, id}))
+      console.log(`reduceCOP`, reduceCOP);
     }
     
   };
