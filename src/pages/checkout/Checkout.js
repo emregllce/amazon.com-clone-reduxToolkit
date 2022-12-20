@@ -7,7 +7,7 @@ import CheckoutProduct from "./CheckoutProduct";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  console.log("cartitems", cartItems);
+  // console.log("cartitems", cartItems);
   const cartTotal = useSelector((state) => state.cart.cartTotalAmount);
   
   const dispatch = useDispatch();

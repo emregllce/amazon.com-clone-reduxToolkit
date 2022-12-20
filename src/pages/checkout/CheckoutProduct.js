@@ -1,22 +1,36 @@
 import React, { useEffect, useState } from "react";
 import "./CheckoutProduct.css";
 import { useDispatch, useSelector } from "react-redux"
+import { addToCartCOP, getTotals, removeItem } from "../../redux/cartSlice";
 
 const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
-  const [qty, setQty] = useState(0);
+  const [qtyCOP, setQtyCOP] = useState(0);
   const dispatch = useDispatch()
+  const cart = useSelector((state)=>state.cart)
 
-  const handleDelete = () => {
-    dispatch({
-        type:"REMOVE_FROM_BASKET",
-        id:id
-    })
+
+  const handleDelete = (e) => {
+    // console.log(`e`, e.target.parentElement.parentElement);
+    dispatch(removeItem({id}))
   };
 
+  useEffect(() => {
+    dispatch(getTotals())
+  }, [cart])
+
   const handleQty = (e) => {
-    setQty(e.target.value);
-    cartQuantity = qty;
-    console.log(qty, cartQuantity);
+    // setQtyCOP(parseInt(e.target.value));;
+    // console.log(e.target.value);
+    if (e.target.value > cartQuantity) {
+      let additionCOP = e.target.value - cartQuantity
+      dispatch(addToCartCOP({additionCOP, id}))
+      console.log(`additionCOP`, additionCOP);
+      console.log(`id`, id);
+    } else {
+      let reduceCOP = cartQuantity - e.target.value
+      console.log(`reduceCOP`, reduceCOP);
+    }
+    
   };
 
   const emptyClick = () => {};

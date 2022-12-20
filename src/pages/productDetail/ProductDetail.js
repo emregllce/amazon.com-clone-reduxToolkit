@@ -16,6 +16,7 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     dispatch(addToCart({product, qty}))
+    console.log(`cart`, cart);
   };
 
   useEffect(() => {
