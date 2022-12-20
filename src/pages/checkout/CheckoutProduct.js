@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CheckoutProduct.css";
 import { useDispatch, useSelector } from "react-redux"
-import { addToCartCOP, getTotals, removeItem } from "../../redux/cartSlice";
+import { addToCartCOP, reduceCard, getTotals, removeItem } from "../../redux/cartSlice";
 
 const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
   const [qtyCOP, setQtyCOP] = useState(0);
@@ -10,10 +10,9 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
 
 
   const handleDelete = (e) => {
-    // console.log(`e`, e.target.parentElement.parentElement);
     dispatch(removeItem({id}))
   };
-
+  
   useEffect(() => {
     dispatch(getTotals())
   }, [cart])
@@ -28,6 +27,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
       console.log(`id`, id);
     } else {
       let reduceCOP = cartQuantity - e.target.value
+      dispatch(reduceCard({reduceCOP, id}))
       console.log(`reduceCOP`, reduceCOP);
     }
     
@@ -71,6 +71,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
             defaultValue={cartQuantity}
             // onSubmit={handleQty}
             onChange={handleQty}
+            value={cartQuantity}
             className="xxx"
           >
             <option value="">0</option>
