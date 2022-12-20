@@ -26,7 +26,7 @@ const Checkout = () => {
         <div className="checkout_left">
           <div className="titlexxx">
             <div className="title1">
-              <p className="checkout__title">Shopping Cart</p>
+              <p className="checkout__title">Shopping Carttt</p>
             </div>
             <div className="title2">
               <p className="checkout__title2">Price</p>
