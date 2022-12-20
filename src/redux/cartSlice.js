@@ -71,7 +71,6 @@ export const cartSlice = createSlice({
         state.cartItems = []
         state.cartTotalQuantity= 0
         state.cartTotalAmount = 0
-        console.log(`state.cartItems.length()`, state.cartItems);
 
       }
     }

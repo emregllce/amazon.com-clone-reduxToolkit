@@ -21,12 +21,9 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
     if (e.target.value > cartQuantity) {
       let additionCOP = e.target.value - cartQuantity
       dispatch(addToCartCOP({additionCOP, id}))
-      console.log(`additionCOP`, additionCOP);
-      console.log(`id`, id);
     } else {
       let reduceCOP = cartQuantity - e.target.value
       dispatch(reduceCard({reduceCOP, id}))
-      console.log(`reduceCOP`, reduceCOP);
     }
     
   };
@@ -66,8 +63,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
           <select
             name="qty-select"
             id="qty-select"
-            defaultValue={cartQuantity}
-            // onSubmit={handleQty}
+            // defaultValue={cartQuantity}
             onChange={handleQty}
             value={cartQuantity}
             className="xxx"
