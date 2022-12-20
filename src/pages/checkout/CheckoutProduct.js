@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux"
 import { addToCartCOP, reduceCard, getTotals, removeItem } from "../../redux/cartSlice";
 
 const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
-  const [qtyCOP, setQtyCOP] = useState(0);
   const dispatch = useDispatch()
   const cart = useSelector((state)=>state.cart)
 
@@ -18,8 +17,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, cartQuantity }) => {
   }, [cart])
 
   const handleQty = (e) => {
-    // setQtyCOP(parseInt(e.target.value));;
-    // console.log(e.target.value);
+
     if (e.target.value > cartQuantity) {
       let additionCOP = e.target.value - cartQuantity
       dispatch(addToCartCOP({additionCOP, id}))

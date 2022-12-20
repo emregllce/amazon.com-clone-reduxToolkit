@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./ProductDetail.css";
 import { useDispatch, useSelector } from "react-redux"
 import { addToCart, getTotals } from "../../redux/cartSlice";
@@ -7,16 +7,13 @@ import { addToCart, getTotals } from "../../redux/cartSlice";
 const ProductDetail = () => {
   const location = useLocation();
   const product = location.state.item;
-  const navigate = useNavigate();
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch()
   const cart = useSelector((state)=>state.cart)
-  // console.log(cart);
 
 
   const handleAddToCart = () => {
     dispatch(addToCart({product, qty}))
-    // console.log(`cart`, cart);
   };
 
   useEffect(() => {
