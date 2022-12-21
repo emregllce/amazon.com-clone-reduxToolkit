@@ -108,6 +108,13 @@ margin-top: 60px;
 .addCart{
     background-color: #F7CA00;
 }
+.addCart:hover{
+    background-color: orange;
+}
+.addCart:active{
+    background-color: #F7CA00;
+}
+
 .buyNow{
     background-color: orange;
 }

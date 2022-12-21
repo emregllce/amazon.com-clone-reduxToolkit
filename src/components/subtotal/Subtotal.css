@@ -31,4 +31,11 @@
     margin-top: 10px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+  }
+  .button-proceed:hover{
+    background-color: orange;
+  }
+  .button-proceed:active{
+    background-color: #F7CA00;
   }
