@@ -4,7 +4,7 @@
   The aim of the project is to implement all the functionalities of the real website to reach the level of a real-life e-commerce website 
   # Technologies
   in this project;
-  - React/ Redux-Toolkit/ Thunk / React-router/ React-toastify
+  - React/ Redux-Toolkit/ Thunk / React-router
   - Firebase-authorization. are used
 
 https://emregllce-amazonclone-reduxtoolkit.netlify.app/ 
